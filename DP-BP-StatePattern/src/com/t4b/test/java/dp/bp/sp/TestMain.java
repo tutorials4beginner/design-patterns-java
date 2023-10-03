@@ -1,0 +1,20 @@
+package com.t4b.test.java.dp.bp.sp;
+
+public class TestMain {
+	public static void main(String[] args) {
+		Context context = new Context();
+
+		StartState startState = new StartState();
+		startState.doAction(context);
+
+		System.out.println(context.getState().toString());
+
+		PlayState playState = new PlayState();
+		playState.doAction(context);
+
+		StopState stopState = new StopState();
+		stopState.doAction(context);
+
+		System.out.println(context.getState().toString());
+	}
+}
